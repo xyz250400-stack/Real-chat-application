@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealChat Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <h2> RealChat Pro</h2>
+            <input type="text" id="username" placeholder="Enter nickname" required>
+            
+            <select id="room">
+                <option value="General">General</option>
+                <option value="Tech">Tech</option>
+                <option value="Random">Random</option>
+            </select>
+            
+            <p style="color:#aaa; font-size:12px; margin:5px 0;">OR</p>
+            
+            <input type="text" id="new-room" placeholder="Create new room name">
+            
+            <button id="join-btn">Join Chat</button>
+        </div>
+    </div>
+
+    <div id="chat-screen" style="display:none;">
+        <div class="sidebar">
+            <h3>Room: <span id="room-name"></span></h3>
+            <h4>Online Users</h4>
+            <ul id="users-list"></ul>
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <h3>RealChat Pro</h3>
+                <p id="typing-indicator"></p>
+            </div>
+            <div id="messages"></div>
+            <div class="input-area">
+                <input type="text" id="message" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
