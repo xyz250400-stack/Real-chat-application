@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background: #0e1621; color: #fff; height: 100vh; }
+
+.login-box {
+    width: 350px; margin: 15% auto; padding: 40px;
+    background: #17212b; border-radius: 12px; text-align: center;
+}
+.login-box input,.login-box select {
+    width: 100%; padding: 12px; margin: 10px 0;
+    background: #242f3d; border: none; border-radius: 8px; color: #fff;
+}
+.login-box button {
+    width: 100%; padding: 12px; background: #5288b5; border: none;
+    border-radius: 8px; color: #fff; font-weight: bold; cursor: pointer;
+}
+.login-box button:hover { background: #4179a8; }
+
+#chat-screen { display: flex; height: 100vh; }
+.sidebar {
+    width: 280px; background: #17212b; padding: 20px;
+    border-right: 1px solid #242f3d;
+}
+#users-list { list-style: none; margin-top: 15px; }
+#users-list li { padding: 8px; background: #242f3d; margin: 5px 0; border-radius: 6px; }
+
+.chat-area { flex: 1; display: flex; flex-direction: column; }
+.chat-header { padding: 15px; background: #17212b; border-bottom: 1px solid #242f3d; }
+#typing-indicator { font-size: 12px; color: #6ab04c; height: 15px; }
+
+#messages {
+    flex: 1; padding: 20px; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 10px;
+}
+.msg {
+    max-width: 60%; padding: 10px 14px; border-radius: 10px;
+    background: #242f3d; align-self: flex-start;
+}
+.msg.you { background: #5288b5; align-self: flex-end; }
+.msg.time { font-size: 11px; color: #aaa; margin-left: 8px; }
+.msg.status { font-size: 10px; color: #6ab04c; margin-left: 5px; }
+.status-msg { text-align: center; color: #aaa; font-size: 12px; font-style: italic; }
+
+.input-area {
+    display: flex; padding: 15px; background: #17212b;
+    border-top: 1px solid #242f3d;
+}
+.input-area input { flex: 1; padding: 12px; background: #242f3d; border: none; border-radius: 8px; color: #fff; }
+.input-area button { margin-left: 10px; padding: 12px 25px; background: #5288b5; border: none; border-radius: 8px; color: #fff; cursor: pointer; }
